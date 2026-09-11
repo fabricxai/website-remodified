@@ -28,7 +28,7 @@ After Innovation Fair 2026, set `FAIR_OVER=1` and `/fair` 301s to `/demo`.
 | `/pricing` | Implementation / Platform / MARBIM structure, no numbers, FAQ |
 | `/about` | SocioFi Technology, the founding argument, team roles, Dhaka |
 | `/demo` `/walkthrough` | Kept; walkthrough clips carry `VIDEO COMING` badges |
-| `/fair` | QR landing for Innovation Fair 2026 · Stall 16. Standalone shell (no nav/footer/thread, always light, Bangla default). WhatsApp deep link when `FAIR.whatsapp` is set, otherwise a 3-field form that posts to `NEXT_PUBLIC_FAIR_LEAD_WEBHOOK` or falls back to a prefilled email. Inline "never" list, vCard, links to fabricxai.com and sociofitechnology.com. Print the QR as `/fair?s=16` to tag the source. |
+| `/fair` | QR landing for Innovation Fair 2026 · Stall 16. Standalone shell (no nav/footer/thread, always light, English default with a বাংলা switch). WhatsApp deep link when `FAIR.whatsapp` is set, otherwise a 3-field form that posts to `NEXT_PUBLIC_FAIR_LEAD_WEBHOOK` or falls back to a prefilled email. Inline "never" list, vCard, links to fabricxai.com and sociofitechnology.com. Print the QR as `/fair?s=16` to tag the source. |
 | `/handoff` | Internal — noindex, excluded from nav, sitemap and robots |
 
 ## Motion system (`src/components/motion/`)

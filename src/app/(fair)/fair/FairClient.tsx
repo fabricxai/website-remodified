@@ -40,7 +40,7 @@ function vcard() {
 }
 
 export default function FairClient() {
-  const [lang, setLang] = useState<Lang>('bn');
+  const [lang, setLang] = useState<Lang>('en');
   const [film, setFilm] = useState(false);
   const [filmMissing, setFilmMissing] = useState(false);
   const [book, setBook] = useState(false);
@@ -93,8 +93,8 @@ export default function FairClient() {
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, padding: '16px 20px', borderBottom: '1px solid var(--line)' }}>
         <a href={FAIR.site} style={{ display: 'flex', alignItems: 'center' }} aria-label="FabricXai"><Logo height={22} /></a>
         <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--line2)', borderRadius: 8, overflow: 'hidden', height: 34 }}>
-          <button onClick={() => pick('bn')} style={langBtn(lang === 'bn')}>বাংলা</button>
           <button onClick={() => pick('en')} style={langBtn(lang === 'en')}>EN</button>
+          <button onClick={() => pick('bn')} style={langBtn(lang === 'bn')}>বাংলা</button>
         </div>
       </div>
 
