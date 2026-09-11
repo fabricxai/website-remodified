@@ -180,18 +180,18 @@ export default function FairClient() {
       </div>
 
       {/* bottom strip: the two sites */}
-      <div style={{ borderTop: '1px solid var(--line)', padding: '18px 20px 22px' }}>
-        <div style={{ maxWidth: 520, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <div style={{ borderTop: '1px solid var(--line)', padding: '34px 20px 38px' }}>
+        <div style={{ maxWidth: 520, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 22 }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              <Logo height={18} />
-              <div style={{ font: `400 9px/1 ${MONO}`, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--t3)' }}>{C.descriptor.en}</div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+              <Logo height={24} />
+              <div style={{ font: `400 9.5px/1 ${MONO}`, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--t3)' }}>{C.descriptor.en}</div>
             </div>
             <div style={{ font: `400 11px/1.5 ${MONO}`, color: 'var(--amber-p)', textAlign: 'right', maxWidth: '20ch' }}>{t('proof')}</div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', font: '400 12.5px/1.5 ' + bodyFam, color: 'var(--t2)' }}>
             <a href={FAIR.site} className="hov-amberp" style={{ color: 'var(--ink)', fontWeight: 600 }}>{t('visit')} →</a>
-            <span>{t('product')} <a href={FAIR.companySite} target="_blank" rel="noopener noreferrer" className="hov-amberp" style={{ color: 'var(--ink)', fontWeight: 600 }}>{FAIR.company}</a> · <a href={FAIR.companySite} target="_blank" rel="noopener noreferrer" className="hov-amberp" style={{ font: `400 11.5px/1 ${MONO}`, color: 'var(--t3)' }}>sociofitechnology.com</a></span>
+            <span>{t('product')} <a href={FAIR.companySite} target="_blank" rel="noopener noreferrer" className="hov-amberp" style={{ color: 'var(--ink)', fontWeight: 600 }}>{FAIR.company} ↗</a></span>
           </div>
         </div>
       </div>
