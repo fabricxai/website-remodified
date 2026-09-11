@@ -541,6 +541,10 @@ export const FAIR = {
   leadWebhook: process.env.NEXT_PUBLIC_FAIR_LEAD_WEBHOOK || '',
   email: 'hello@fabricxai.com',
   site: 'https://fabricxai.com',
+  /** The two live experiences on the platform (see docs/PLATFORM_FAIR_BRIEF.md). Set platformLive=false to hide the buttons. */
+  platformLive: true,
+  platformMarbim: 'https://platform.fabricxai.com/marbim',
+  platformDemo: 'https://platform.fabricxai.com/demo',
   company: 'SocioFi Technology',
   companySite: 'https://sociofitechnology.com',
   title: ['You found the thread.', 'সুতোটা পেয়ে গেছেন।'] as Pair,

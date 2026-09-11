@@ -13,6 +13,10 @@ const C = {
   title: { en: 'You found the thread.', bn: 'সুতোটা পেয়ে গেছেন।' },
   sub: { en: 'One order, from buyer email to bank realisation, on one system — with MARBIM reading the paperwork on the way.', bn: 'এক অর্ডার, বায়ারের ইমেইল থেকে ব্যাংক রিয়ালাইজেশন, এক সিস্টেমে — পথের কাগজ পড়ছে মারবিম।' },
   talk: { en: 'Talk to us on WhatsApp', bn: 'হোয়াটসঅ্যাপে কথা বলুন' },
+  tryHead: { en: 'Try it now, on your phone', bn: 'এখনই চেষ্টা করুন, আপনার ফোনে' },
+  askMarbim: { en: 'Ask MARBIM — a merchandiser in your pocket', bn: 'মারবিমকে জিজ্ঞেস করুন — পকেটে একজন মার্চেন্ডাইজার' },
+  dropDoc: { en: 'Drop your own tech pack or PO', bn: 'আপনার টেক প্যাক বা PO দিন' },
+  tryNote: { en: '8 questions or 3 documents. Nothing is saved. Then come and see the real thing.', bn: '৮টি প্রশ্ন বা ৩টি কাগজ। কিছুই সংরক্ষিত হয় না। তারপর আসল জিনিসটা দেখুন।' },
   book: { en: 'Book a demo at the fair', bn: 'মেলায় ডেমো বুক করুন' },
   film: { en: 'Watch the 58-second film', bn: '৫৮ সেকেন্ডের ফিল্ম দেখুন' },
   never: { en: 'What MARBIM never does', bn: 'মারবিম যা কখনো করে না' },
@@ -120,6 +124,20 @@ export default function FairClient() {
                 {t('talk')}
               </a>
             ) : null}
+            {FAIR.platformLive && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8, padding: '14px 0 6px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, font: `500 10.5px/1 ${MONO}`, letterSpacing: lang === 'bn' ? 0 : '.1em', textTransform: 'uppercase', color: 'var(--t3)', fontFamily: lang === 'bn' ? bodyFam : undefined }}>
+                  <span style={{ width: 10, height: 2, background: 'var(--amber)' }} />{t('tryHead')}
+                </div>
+                <a href={`${FAIR.platformMarbim}?src=fair${source ? '&s=' + encodeURIComponent(source) : ''}`} className="hov-sec" style={{ ...btn('secondary'), justifyContent: 'space-between', padding: '0 16px', textAlign: 'left' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><Mark style={{ width: 14 }} />{t('askMarbim')}</span><span aria-hidden>→</span>
+                </a>
+                <a href={`${FAIR.platformDemo}?src=fair${source ? '&s=' + encodeURIComponent(source) : ''}`} className="hov-sec" style={{ ...btn('secondary'), justifyContent: 'space-between', padding: '0 16px', textAlign: 'left' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><span style={{ width: 12, height: 15, border: '1.5px solid var(--ink)', borderRadius: 2, display: 'block' }} />{t('dropDoc')}</span><span aria-hidden>→</span>
+                </a>
+                <div style={{ font: '400 11.5px/1.5 ' + bodyFam, color: 'var(--t3)' }}>{t('tryNote')}</div>
+              </div>
+            )}
             <button onClick={() => { setBook((b) => !b); setFilm(false); }} className={waHref ? 'hov-sec' : 'hov-amber'} style={btn(waHref ? 'secondary' : 'primary')}>{t('book')}</button>
             {book && (sent !== 'no' ? (
               <div style={{ background: 'var(--surface)', border: '1px solid var(--ok)', borderRadius: 10, padding: 18, display: 'flex', flexDirection: 'column', gap: 8 }}>
