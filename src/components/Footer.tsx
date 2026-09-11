@@ -18,7 +18,7 @@ export default function Footer() {
     { title: bn ? 'যোগাযোগ' : 'Contact', items: [[`WhatsApp ${SITE.whatsappDisplay}`, `https://wa.me/${SITE.whatsapp}`], ['hello@fabricxai.com', 'mailto:hello@fabricxai.com'], ['Dhaka, Bangladesh', '']] },
   ];
 
-  const itemStyle = { font: "400 14px/1.5 'Inter',sans-serif", color: 'var(--t2)', cursor: 'pointer' } as const;
+  const itemStyle = { font: "400 14px/1.5 'Inter',sans-serif", color: 'var(--t2)', cursor: 'pointer', padding: '6px 0', display: 'block' } as const;
 
   return (
     <footer style={{ borderTop: '1px solid var(--line)', background: 'var(--canvas)' }}>
@@ -30,7 +30,7 @@ export default function Footer() {
             <div style={{ font: `400 11.5px/1.5 ${MONO}`, color: 'var(--amber-p)' }}>{t(T.proof)}</div>
           </div>
           {cols.map((c) => (
-            <div key={c.title} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div key={c.title} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <div style={{ font: `500 11px/1 ${MONO}`, letterSpacing: '.09em', textTransform: 'uppercase', color: 'var(--t3)' }}>{c.title}</div>
               {c.items.map(([label, href]) => !href
                 ? <div key={label} className="hov-amberp" style={itemStyle}>{label}</div>

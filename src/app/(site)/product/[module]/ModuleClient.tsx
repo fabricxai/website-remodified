@@ -107,7 +107,7 @@ export default function ModuleClient({ slug }: { slug: string }) {
             </div>
           </div>
 
-          <div style={{ marginTop: 'clamp(40px,5vw,64px)', background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 12, padding: '22px 24px', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: 20, alignItems: 'center', clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)' }}>
+          <div data-r="safeguard" style={{ marginTop: 'clamp(40px,5vw,64px)', background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: 12, padding: '22px 24px', display: 'grid', gridTemplateColumns: 'auto 1fr auto', gap: 20, alignItems: 'center', clipPath: 'polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <div style={{ width: 22, height: 22, border: '1.5px solid var(--ink)', borderRadius: 3, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                 <div style={{ width: 12, height: 2, background: 'var(--amber)' }} />

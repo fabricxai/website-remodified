@@ -573,6 +573,11 @@ input, select { font-family: inherit; color: inherit; }
 }
 @media (max-width:720px) { [data-r~="jbadge"] { display:none !important; } [data-r~="navcta"] { display:none !important; } }
 @media (max-width:560px) { [data-r~="wrap"] { padding-left:20px; padding-right:20px; } }
+@media (max-width:720px) {
+  [data-r~="safeguard"] { grid-template-columns:1fr !important; gap:12px !important; }
+  [data-r~="faq"] { grid-template-columns:1fr !important; gap:8px !important; }
+  [data-r~="inventory"] { grid-template-columns:1fr !important; gap:4px !important; }
+}
 @media (prefers-reduced-motion: reduce) { * { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
 
 /* ---------- hover states (ported from style-hover attributes) ---------- */

@@ -58,7 +58,7 @@ export default function PricingClient() {
             <SectionHead eyebrow="FAQ" title="The five questions every owner asks." titleStyle={{ ...h2Style, font: "700 clamp(22px,2.4vw,30px)/1.1 'Archivo',sans-serif" }} max="24ch" />
             <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
               {PRICING_FAQ.map(([q, a]) => (
-                <div key={q} style={{ display: 'grid', gridTemplateColumns: 'minmax(0,.9fr) minmax(0,1.4fr)', gap: 20, padding: '18px 0', borderTop: '1px solid var(--line2)' }}>
+                <div key={q} data-r="faq" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,.9fr) minmax(0,1.4fr)', gap: 20, padding: '18px 0', borderTop: '1px solid var(--line2)' }}>
                   <div style={{ font: "600 15px/1.4 'Inter',sans-serif" }}>{q}</div>
                   <p style={{ ...bodyStyle, maxWidth: '56ch' }}>{a}</p>
                 </div>

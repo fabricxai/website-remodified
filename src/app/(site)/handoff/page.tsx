@@ -84,11 +84,11 @@ export default function HandoffPage() {
             <h2 style={h3Style}>Element → component → token.</h2>
           </div>
           <div style={{ border: '1px solid var(--line)', borderRadius: 10, overflow: 'hidden', background: 'var(--surface)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr 1.5fr', gap: 14, padding: '12px 20px', background: 'var(--sunken)', font: `500 10px/1 ${MONO}`, letterSpacing: '.07em', textTransform: 'uppercase', color: 'var(--t3)' }}>
+            <div data-r="inventory" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr 1.5fr', gap: 14, padding: '12px 20px', background: 'var(--sunken)', font: `500 10px/1 ${MONO}`, letterSpacing: '.07em', textTransform: 'uppercase', color: 'var(--t3)' }}>
               <div>Element</div><div>Component</div><div>Tokens &amp; rules</div>
             </div>
             {INVENTORY.map(([el, comp, tok]) => (
-              <div key={el} style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr 1.5fr', gap: 14, padding: '14px 20px', borderTop: '1px solid var(--line)', alignItems: 'baseline' }}>
+              <div key={el} data-r="inventory" style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr 1.5fr', gap: 14, padding: '14px 20px', borderTop: '1px solid var(--line)', alignItems: 'baseline' }}>
                 <div style={{ font: "500 13.5px/1.4 'Inter',sans-serif" }}>{el}</div>
                 <div style={{ font: `400 12.5px/1.4 ${MONO}`, color: 'var(--amber-p)' }}>{comp}</div>
                 <div style={{ font: `400 12.5px/1.55 ${MONO}`, color: 'var(--t2)', textWrap: 'pretty' }}>{tok}</div>
