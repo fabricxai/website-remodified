@@ -15,7 +15,7 @@ export default function Footer() {
   const cols: { title: string; items: [string, string][] }[] = [
     { title: bn ? 'প্রোডাক্ট' : 'Product', items: [['Product', '/product'], ['MARBIM', '/marbim'], ['Technology', '/technology'], ['Walkthrough', '/walkthrough'], ['Pricing', '/pricing']] },
     { title: bn ? 'কোম্পানি' : 'Company', items: [['About', '/about'], [t(T.ctaFloor), '/demo'], ['Innovation Fair 2026', '/fair'], ['LinkedIn', ''], ['YouTube', '']] },
-    { title: bn ? 'যোগাযোগ' : 'Contact', items: [['WhatsApp +880 1XXX-XXXXXX', ''], ['hello@fabricxai.com', ''], ['Dhaka, Bangladesh', '']] },
+    { title: bn ? 'যোগাযোগ' : 'Contact', items: [[`WhatsApp ${SITE.whatsappDisplay}`, `https://wa.me/${SITE.whatsapp}`], ['hello@fabricxai.com', 'mailto:hello@fabricxai.com'], ['Dhaka, Bangladesh', '']] },
   ];
 
   const itemStyle = { font: "400 14px/1.5 'Inter',sans-serif", color: 'var(--t2)', cursor: 'pointer' } as const;
@@ -32,9 +32,11 @@ export default function Footer() {
           {cols.map((c) => (
             <div key={c.title} style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               <div style={{ font: `500 11px/1 ${MONO}`, letterSpacing: '.09em', textTransform: 'uppercase', color: 'var(--t3)' }}>{c.title}</div>
-              {c.items.map(([label, href]) => href
-                ? <Link key={label} href={href} className="hov-amberp" style={itemStyle}>{label}</Link>
-                : <div key={label} className="hov-amberp" style={itemStyle}>{label}</div>)}
+              {c.items.map(([label, href]) => !href
+                ? <div key={label} className="hov-amberp" style={itemStyle}>{label}</div>
+                : href.startsWith('/')
+                  ? <Link key={label} href={href} className="hov-amberp" style={itemStyle}>{label}</Link>
+                  : <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="hov-amberp" style={itemStyle}>{label}</a>)}
             </div>
           ))}
         </div>

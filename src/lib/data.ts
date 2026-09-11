@@ -410,6 +410,8 @@ export const PHONE_FEED: [string, string, string][] = [
 // ============================================================================
 
 export const SITE = {
+  whatsapp: '8801743036425',
+  whatsappDisplay: '+880 1743-036425',
   name: 'FabricXai',
   category: 'The Garments Operating System',
   descriptor: 'Garments Intelligent System',
@@ -534,7 +536,7 @@ export const FAIR = {
   hall: '',
   dates: '',
   /** WhatsApp business number in international digits only, e.g. '8801700000000'. Empty = booking falls back to the form. */
-  whatsapp: '',
+  whatsapp: '8801743036425',
   /** Optional lead webhook (e.g. a Google Apps Script web app URL). Read from NEXT_PUBLIC_FAIR_LEAD_WEBHOOK at build time. */
   leadWebhook: process.env.NEXT_PUBLIC_FAIR_LEAD_WEBHOOK || '',
   email: 'hello@fabricxai.com',
