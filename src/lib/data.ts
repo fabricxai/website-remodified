@@ -543,8 +543,8 @@ export const FAIR = {
   site: 'https://fabricxai.com',
   /** The two live experiences on the platform (see docs/PLATFORM_FAIR_BRIEF.md). Set platformLive=false to hide the buttons. */
   platformLive: true,
-  platformMarbim: 'https://platform.fabricxai.com/marbim',
-  platformDemo: 'https://platform.fabricxai.com/demo',
+  platformMarbim: 'https://platform.fabricxai.com/try/marbim',
+  platformDemo: 'https://platform.fabricxai.com/try/demo',
   company: 'SocioFi Technology',
   companySite: 'https://sociofitechnology.com',
   title: ['You found the thread.', 'সুতোটা পেয়ে গেছেন।'] as Pair,
