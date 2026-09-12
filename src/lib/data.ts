@@ -542,7 +542,7 @@ export const FAIR = {
   email: 'hello@fabricxai.com',
   site: 'https://fabricxai.com',
   /** The two live experiences on the platform (see docs/PLATFORM_FAIR_BRIEF.md). Set platformLive=false to hide the buttons. */
-  platformLive: true,
+  platformLive: false,
   platformMarbim: 'https://platform.fabricxai.com/try/marbim',
   platformDemo: 'https://platform.fabricxai.com/try/demo',
   company: 'SocioFi Technology',
