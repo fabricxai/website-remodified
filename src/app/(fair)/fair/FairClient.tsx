@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState, type CSSProperties, type FormEvent } from 'react';
+import Link from 'next/link';
 import { FAIR, NEVER, youtubeId } from '@/lib/data';
 import { Logo, Mark, PlayTri, Slashes } from '@/components/ui';
 
@@ -13,6 +14,8 @@ const C = {
   title: { en: 'You found the thread.', bn: 'সুতোটা পেয়ে গেছেন।' },
   sub: { en: 'One order, from buyer email to bank realisation, on one system — with MARBIM reading the paperwork on the way.', bn: 'এক অর্ডার, বায়ারের ইমেইল থেকে ব্যাংক রিয়ালাইজেশন, এক সিস্টেমে — পথের কাগজ পড়ছে মারবিম।' },
   talk: { en: 'Talk to us on WhatsApp', bn: 'হোয়াটসঅ্যাপে কথা বলুন' },
+  meet: { en: 'Meet Marbim', bn: 'মারবিমের সাথে পরিচিত হন' },
+  meetSub: { en: 'It introduces itself, then reads a paper in front of you. Two minutes, on this phone.', bn: 'নিজের পরিচয় দেয়, তারপর আপনার সামনেই একটা কাগজ পড়ে দেখায়। দুই মিনিট, এই ফোনেই।' },
   tryHead: { en: 'Try it now, on your phone', bn: 'এখনই চেষ্টা করুন, আপনার ফোনে' },
   askMarbim: { en: 'Ask MARBIM — a merchandiser in your pocket', bn: 'মারবিমকে জিজ্ঞেস করুন — পকেটে একজন মার্চেন্ডাইজার' },
   dropDoc: { en: 'Drop your own tech pack or PO', bn: 'আপনার টেক প্যাক বা PO দিন' },
@@ -115,6 +118,19 @@ export default function FairClient() {
           </div>
           <h1 style={{ font: '700 clamp(38px,11vw,60px)/1.02 ' + fam, letterSpacing: lang === 'bn' ? 0 : '-.032em', margin: 0, textWrap: 'balance' }}>{t('title')}</h1>
           <p style={{ font: '400 clamp(16px,4.4vw,19px)/1.55 ' + bodyFam, color: 'var(--t2)', margin: 0, textWrap: 'pretty' }}>{t('sub')}</p>
+
+          {/* 0 · Meet Marbim — the interactive intro at /fair/marbim */}
+          <Link href={`/fair/marbim${source ? '?s=' + encodeURIComponent(source) : ''}`} className="hov-sec" style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '14px 16px', background: 'var(--surface)', border: '1px solid var(--line2)', borderRadius: 10, boxShadow: 'var(--sh2)', color: 'var(--ink)', textDecoration: 'none', clipPath: 'polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%)' }}>
+            <div style={{ width: 46, height: 46, borderRadius: 10, background: 'var(--chrome)', display: 'grid', placeItems: 'center', flexShrink: 0 }}><Mark style={{ width: 22 }} ink="#F4F3F0" /></div>
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ font: '600 16px/1.3 ' + bodyFam }}>{t('meet')}</span>
+                <span style={{ font: `500 9px/1 ${MONO}`, letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--amber-p)', background: 'var(--amber-s)', border: '1px solid var(--amber-line)', borderRadius: 4, padding: '4px 6px' }}>Try</span>
+              </div>
+              <div style={{ font: '400 12.5px/1.5 ' + bodyFam, color: 'var(--t2)', textWrap: 'pretty' }}>{t('meetSub')}</div>
+            </div>
+            <span aria-hidden style={{ color: 'var(--amber-p)', fontSize: 18 }}>→</span>
+          </Link>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10, paddingTop: 6 }}>
             {/* 1 · talk / book */}
