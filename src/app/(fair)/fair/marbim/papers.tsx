@@ -3,7 +3,8 @@ import type { Pair } from '@/lib/data';
 
 export type DocKey = 'po' | 'lc' | 'tp' | 'challan';
 
-export interface Row { k: Pair; v: string; vbn?: string; warn?: boolean }
+/** `warn` rows carry the value Marbim is unsure of plus a note; the visitor confirms or edits them before approving. */
+export interface Row { k: Pair; v: string; vbn?: string; warn?: boolean; note?: Pair; hint?: Pair }
 
 export interface Doc {
   key: DocKey;
@@ -43,7 +44,7 @@ export const DOCS: Doc[] = [
       { k: ['Amount', 'পরিমাণ'], v: 'USD 172,080 · ±5%' },
       { k: ['Port', 'বন্দর'], v: 'Chattogram → Gothenburg' },
       { k: ['Expiry', 'মেয়াদ'], v: '25 Nov 2026 · Dhaka' },
-      { k: ['Latest shipment', 'সর্বশেষ শিপমেন্ট'], v: '10 Nov 2026 — but your PO says 12 Nov', vbn: '10 Nov 2026 — কিন্তু আপনার PO-তে ১২ নভেম্বর', warn: true },
+      { k: ['Latest shipment', 'সর্বশেষ শিপমেন্ট'], v: '10 Nov 2026', warn: true, note: ['but your PO says 12 Nov', 'কিন্তু আপনার PO-তে ১২ নভেম্বর'], hint: ['Date after amendment', 'সংশোধনের পরের তারিখ'] },
     ],
     draftTitle: ['LC on file · 021/26', 'এলসি নথিভুক্ত · 021/26'], draftRows: [0, 2, 5],
   },
@@ -56,9 +57,9 @@ export const DOCS: Doc[] = [
       { k: ['Colour', 'রং'], v: 'Navy · 19-3933 TCX' },
       { k: ['Sizes', 'সাইজ'], v: 'S · M · L · XL' },
       { k: ['Chest ½ (M)', 'বুক ½ (M)'], v: '52 cm · tolerance ±1 cm' },
-      { k: ['Wash care', 'ওয়াশ কেয়ার'], v: 'not on the paper — left empty', vbn: 'কাগজে নেই — খালি রাখলাম', warn: true },
+      { k: ['Wash care', 'ওয়াশ কেয়ার'], v: '', warn: true, note: ['not on the paper — left empty', 'কাগজে নেই — খালি রাখলাম'], hint: ['e.g. Machine wash cold', 'যেমন: ঠান্ডা পানিতে মেশিন ওয়াশ'] },
     ],
-    draftTitle: ['Style sheet · piqué polo', 'স্টাইল শিট · পিকে পোলো'], draftRows: [0, 1, 4],
+    draftTitle: ['Style sheet · piqué polo', 'স্টাইল শিট · পিকে পোলো'], draftRows: [0, 1, 5],
   },
   {
     key: 'challan', tag: 'Challan', name: ['Handwritten challan', 'হাতে লেখা চালান'], messy: true,
@@ -69,9 +70,9 @@ export const DOCS: Doc[] = [
       { k: ['Date', 'তারিখ'], v: '03 Sep 2026' },
       { k: ['Item', 'মাল'], v: 'Navy piqué · 220 GSM' },
       { k: ['Weight', 'ওজন'], v: '1,038 kg' },
-      { k: ['Rolls', 'রোল'], v: '42 — handwriting unclear', vbn: '৪২ — হাতের লেখা অস্পষ্ট', warn: true },
+      { k: ['Rolls', 'রোল'], v: '42', vbn: '৪২', warn: true, note: ['handwriting unclear — 41 or 42?', 'হাতের লেখা অস্পষ্ট — ৪১ না ৪২?'], hint: ['Count the rolls', 'রোল গুনে লিখুন'] },
     ],
-    draftTitle: ['Fabric received · challan 1187', 'কাপড় গ্রহণ · চালান ১১৮৭'], draftRows: [1, 3, 4],
+    draftTitle: ['Fabric received · challan 1187', 'কাপড় গ্রহণ · চালান ১১৮৭'], draftRows: [1, 5, 4],
   },
 ];
 
