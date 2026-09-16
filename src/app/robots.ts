@@ -4,7 +4,7 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://fabricxai.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: '*', allow: '/', disallow: ['/handoff'] }],
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/handoff', '/pilot'] }],
     sitemap: BASE + '/sitemap.xml',
   };
 }
