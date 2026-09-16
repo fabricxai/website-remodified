@@ -1,0 +1,247 @@
+{
+  "factory": "Baraka Fashion Ltd",
+  "portalName": "Baraka pilot",
+  "portalTagline": "FabricXai project portal",
+  "updated": "Wednesday 16 September 2026, 18:00",
+  "updatedBy": "FabricXai",
+  "appUrl": "https://baraka.fabricxai.com",
+  "roadmapPdf": "/FabricXai_Baraka_Implementation_Roadmap.pdf",
+  "reportEmail": "kamrul@fabricxai.com",
+  "rail": {
+    "who": ["Private to Baraka Fashion Ltd and FabricXai.", "Signed in as the factory owner."]
+  },
+  "today": {
+    "title": "Kickoff is Sunday. The IT officer trains first on Saturday, then merchandising and the departments it hands to go live.",
+    "sub": "Four days to champion training, five to kickoff. Week-one sessions run Sunday, Monday, Wednesday and Thursday. Everything FabricXai has done, is doing, and needs from Baraka is on this page.",
+    "stats": [
+      { "label": "departments live", "value": "auto", "auto": "departmentsLive" },
+      { "label": "people trained", "value": 0 },
+      { "label": "open issues", "value": "auto", "auto": "openIssues" },
+      { "label": "things we need from Baraka before Saturday", "value": "auto", "auto": "neededFromBaraka", "action": true }
+    ],
+    "needed": {
+      "title": "Needed from Baraka before Saturday 20 September",
+      "items": [
+        "The IT officer free for 2 to 3 hours on Saturday 20 September for champion training",
+        "30 minutes with management for the kickoff meeting on Sunday",
+        "Documents of all current live orders: enquiry, PO, sales contract, LC, PI",
+        "Merchandising (Sun), sampling and procurement (Mon), commercial (Wed), IE and CAD (Thu) free for their session"
+      ]
+    },
+    "doing": {
+      "title": "What FabricXai is doing this week",
+      "items": [
+        "Finishing the merchandising, sampling, procurement and commercial screens",
+        "Preparing quick cards in English and Bangla for each role",
+        "Setting up user accounts for week-one departments, starting with the IT officer",
+        "Loading masters: buyers, suppliers, ten lines, TNA template"
+      ]
+    },
+    "nextReview": "Thursday 25 September, 30 minutes"
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "lede": "Dates are never quietly changed. When a date moves, the old one stays visible with the reason.",
+    "downloadLabel": "Download the roadmap (PDF)",
+    "timelineStart": "2026-08-17",
+    "phases": [
+      { "name": "Implementation", "start": "2026-09-21", "end": "2026-10-09", "dates": "21 Sep to 9 Oct", "summary": "All sixteen departments go live over three weeks, following the life of an order." },
+      { "name": "Monitoring", "start": "2026-10-12", "end": "2026-10-29", "dates": "12 to 29 Oct", "summary": "FabricXai on site daily, fixing issues the same day." },
+      { "name": "Handover", "start": "2026-10-29", "end": "2026-10-29", "dates": "29 Oct", "summary": "Signed over to the factory owner." },
+      { "name": "Maintenance", "start": "2026-11-01", "end": "2027-01-31", "dates": "1 Nov to 31 Jan 2027", "summary": "Bug fixes and support. No new features." }
+    ],
+    "milestones": [
+      { "when": "17 Aug", "title": "Merchandising study", "what": "Baraka's real merchandising documents studied to learn how the factory actually works.", "status": "done" },
+      { "when": "Sep", "title": "Platform ready", "what": "Backend built; factory process map of sixteen departments and twenty-three hand-offs; screens designed.", "status": "done" },
+      { "when": "20 Sep", "title": "Champion training", "what": "The IT officer, Baraka's system champion, is trained on every week-one module before anyone else. Saturday, 2 to 3 hours.", "status": "next", "statusLabel": "Saturday" },
+      { "when": "21 to 25 Sep", "title": "Kickoff, then the order front-end", "what": "Merchandising, sampling, procurement, commercial, IE and CAD go live so information flows across an order from day one.", "status": "next", "statusLabel": "Next week" },
+      { "when": "28 Sep to 2 Oct", "title": "The floor loop", "what": "Planning, sewing, store, cutting and fabric QC. Ten-line live board; supervisors enter hourly output on phones.", "status": "planned" },
+      { "when": "5 to 9 Oct", "title": "Finishing to money", "what": "Finishing, quality, shipment, accounts and the owner's daily view. All departments live.", "status": "planned" },
+      { "when": "12 to 29 Oct", "title": "Monitoring on the floor", "what": "Daily presence, same-day fixes, weekly review with management.", "status": "planned" },
+      { "when": "29 Oct", "title": "Handover to the owner", "what": "Walkthrough, accounts confirmed, training records, sign-off that every department is live.", "status": "planned" },
+      { "when": "1 Nov to 31 Jan", "title": "Maintenance", "what": "Bug fixes, user questions, small adjustments. Support ends 31 January 2027 unless extended.", "status": "planned" }
+    ]
+  },
+  "departments": {
+    "title": "Departments",
+    "lede": "A department is \"live\" when its people are trained, its current work is loaded, and it has entered data for five working days in a row.",
+    "weeks": [
+      {
+        "label": "Week 1",
+        "title": "the order front-end, 21 to 25 September",
+        "tiles": [
+          { "name": "System champion (IT officer)", "status": "training_scheduled", "info": "Saturday 20 Sep, 2 to 3 hours, all week-one modules", "department": false },
+          { "name": "Merchandising", "status": "training_scheduled", "info": "Sunday 21 Sep, 1 hour" },
+          { "name": "Sampling", "status": "training_scheduled", "info": "Monday 22 Sep, 1 hour" },
+          { "name": "Procurement", "status": "training_scheduled", "info": "Monday 22 Sep, 1 hour" },
+          { "name": "Commercial", "status": "training_scheduled", "info": "Wednesday 24 Sep, 1 hour" },
+          { "name": "Industrial engineering", "status": "training_scheduled", "info": "Thursday 25 Sep, 30 min" },
+          { "name": "CAD and marker", "status": "training_scheduled", "info": "Thursday 25 Sep, 30 min" }
+        ]
+      },
+      {
+        "label": "Week 2",
+        "title": "the floor loop, 28 September to 2 October",
+        "tiles": [
+          { "name": "Planning", "status": "not_started", "info": "Line loading for ten lines" },
+          { "name": "Sewing", "status": "not_started", "info": "Ten line supervisors, floor training" },
+          { "name": "Store", "status": "not_started", "info": "Fabric, trims, finished goods" },
+          { "name": "Cutting", "status": "not_started", "info": "Cut plans, bundles, reconciliation" },
+          { "name": "Fabric QC", "status": "not_started", "info": "Four-point inspection, shade lots" },
+          { "name": "Washing", "status": "not_started", "info": "Challans in and out" }
+        ]
+      },
+      {
+        "label": "Week 3",
+        "title": "finishing to money, 5 to 9 October",
+        "tiles": [
+          { "name": "Finishing and packing", "status": "not_started", "info": "Cartons, packing lists" },
+          { "name": "Quality", "status": "not_started", "info": "Inline, end-line, final inspection" },
+          { "name": "Accounts", "status": "not_started", "info": "Budget vs actual per order" },
+          { "name": "Maintenance and compliance", "status": "not_started", "info": "Breakdowns, audits, documents" },
+          { "name": "Owner view", "status": "not_started", "info": "Capacity, risk, output, money", "department": false }
+        ]
+      }
+    ]
+  },
+  "log": {
+    "title": "Progress log",
+    "lede": "Written by FabricXai every working day during implementation, weekly during monitoring. Plain words, including what went wrong.",
+    "entries": [
+      {
+        "date": "Wednesday 16 September 2026",
+        "title": "Roadmap shared, champion named, this portal opened",
+        "body": "The implementation roadmap was sent to Baraka management. Baraka's IT officer will be the system champion and is trained first, on Saturday 20 September. Week-one sessions are set for Sunday, Monday, Wednesday and Thursday. This portal goes live so both teams look at the same page from now on.",
+        "tags": ["Management"]
+      },
+      {
+        "date": "Week of 7 September 2026",
+        "title": "Every department's screens designed",
+        "body": "Screen designs completed for all sixteen departments following one set of layout rules, so a person who learns one department's screens can read every other department's. Floor screens designed for phones in Bangla.",
+        "tags": ["FabricXai"]
+      },
+      {
+        "date": "Week of 31 August 2026",
+        "title": "Factory process map finished",
+        "body": "How an order moves through Baraka from enquiry to payment, written down department by department: sixteen departments, twenty-three hand-offs between them. Merchandising reviewed the merchandising part.",
+        "tags": ["FabricXai", "Merchandising"]
+      },
+      {
+        "date": "17 August 2026",
+        "title": "Merchandising study started",
+        "body": "Sat with the merchandising team and collected the documents they work with every day. This is what the system is being shaped around.",
+        "tags": ["Merchandising"]
+      }
+    ]
+  },
+  "issues": {
+    "title": "Issues",
+    "lede": "Anyone at Baraka can raise one from any screen of the app. Every issue is acknowledged the same working day and stays here until it is fixed or we explain why not.",
+    "empty": "No issues raised yet. The first one will appear here with who raised it, which department, and when it was acknowledged."
+  },
+  "data": {
+    "title": "Data we hold",
+    "lede": "Every document or dataset Baraka has given FabricXai, what it is used for, and who can see it.",
+    "rows": [
+      { "item": "Buyer enquiry packs (design sheet, spec, lay plan)", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Enquiry screen; teaching Marbim to read incoming packs", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Open costing sheets", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Costing sheet layout and calculation", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Buyer purchase orders with size breakdown", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Order record; Marbim PO reading", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Sales contracts and budget sheets", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Order confirmation; budget vs actual", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Supplier proforma invoices and cloth orders", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Purchase orders; import tracker", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Sample requisitions and sample plan", "from": "Merchandising", "received": "Aug 2026", "usedFor": "Sampling screens and approval tracker", "visibleTo": "Kamrul, Arifur" },
+      { "item": "In-house and TNA checklists", "from": "Merchandising", "received": "Aug 2026", "usedFor": "TNA template", "visibleTo": "Kamrul, Arifur" },
+      { "item": "Daily production reports", "from": "Production", "received": "Aug 2026", "usedFor": "Generated production report; ten-line board", "visibleTo": "Kamrul, Arifur" }
+    ],
+    "assurances": [
+      { "title": "Where it is stored", "body": "Encrypted storage in the Baraka environment at baraka.fabricxai.com. Not mixed with any other factory's data." },
+      { "title": "Who owns it", "body": "Baraka. FabricXai uses it only to build and support this system and deletes working copies at handover." },
+      { "title": "Nothing is public", "body": "No document, buyer, price or quantity from Baraka appears anywhere outside this portal and the app." }
+    ]
+  },
+  "meetings": {
+    "title": "Meetings",
+    "lede": "The weekly 30-minute review with management, written up the same day. The champion marks each one as acknowledged.",
+    "items": [
+      {
+        "title": "Kickoff",
+        "sub": "Sunday 21 September, 30 min, with management and department heads",
+        "columns": [
+          { "heading": "Purpose", "items": ["Walk through the roadmap", "Introduce the IT officer as system champion", "Confirm who attends each week-one session"] },
+          { "heading": "Decisions needed", "items": ["Who attends each session", "Which live orders are loaded first"] },
+          { "heading": "Notes", "items": ["Not held yet"] }
+        ],
+        "acknowledged": false,
+        "upcoming": false
+      },
+      {
+        "title": "Weekly review 1",
+        "sub": "Thursday 25 September",
+        "columns": [
+          { "heading": "Done", "items": ["—"] },
+          { "heading": "Blocked", "items": ["—"] },
+          { "heading": "Needed from Baraka", "items": ["—"] }
+        ],
+        "acknowledged": false,
+        "upcoming": true
+      }
+    ]
+  },
+  "handover": {
+    "title": "Handover and support",
+    "lede": "What has to be true on 29 October for the system to be signed over, and what support looks like after that.",
+    "checklistTitle": "Handover checklist",
+    "checklist": [
+      { "item": "Roadmap agreed with management", "done": true, "date": "16 Sep" },
+      { "item": "System champion named: the IT officer", "done": true, "date": "16 Sep" },
+      { "item": "Every department live for five working days", "done": false, "date": "by 23 Oct" },
+      { "item": "All user accounts and permissions confirmed by department heads", "done": false, "date": "by 27 Oct" },
+      { "item": "Training record complete: who, what, when, quick cards handed out", "done": false, "date": "by 27 Oct" },
+      { "item": "Open issues either fixed or accepted into maintenance", "done": false, "date": "by 28 Oct" },
+      { "item": "Owner walkthrough of the owner view and this portal", "done": false, "date": "29 Oct" },
+      { "item": "Sign-off by the factory owner", "done": false, "date": "29 Oct" }
+    ],
+    "maintenance": {
+      "title": "Maintenance, 1 November to 31 January 2027",
+      "included": ["Bug fixes", "User questions", "Account and access changes", "Small changes to existing screens and reports", "Keeping the system up"],
+      "notIncluded": ["New departments", "New features or screens", "Changes to how a department works"],
+      "until": "Issues are raised through the system champion and acknowledged the same working day. Support ends",
+      "supportEnds": "31 January 2027",
+      "untilAfter": "; continuation is agreed before then."
+    },
+    "contacts": [
+      { "name": "Arifur Rahman", "how": "Call or WhatsApp", "phone": "01795789078" },
+      { "name": "Md. Kamrul Hasan", "how": "Call or WhatsApp", "phone": "01743036425", "email": "kamrul@fabricxai.com" }
+    ]
+  },
+  "agreement": {
+    "title": "Working agreement",
+    "lede": "What each team owes the other. One page, agreed at kickoff.",
+    "sides": [
+      {
+        "title": "FabricXai will",
+        "items": [
+          "Update this portal every working day during implementation and weekly after",
+          "Acknowledge every issue the same working day and give a fix date",
+          "Tell Baraka about any slipped date here, with the reason, before Baraka notices",
+          "Be on the floor the morning after each department goes live",
+          "Never show Baraka's data outside this portal and the app"
+        ]
+      },
+      {
+        "title": "Baraka will",
+        "items": [
+          "Keep the IT officer as system champion and single point of contact",
+          "Make the agreed people available for their training hour in their week",
+          "Have each live department enter its data daily, not at week end",
+          "Raise problems in the app or portal, not only by phone",
+          "Attend the 30-minute weekly review"
+        ]
+      }
+    ],
+    "escalation": {
+      "label": "If something is stuck:",
+      "path": ["the IT officer (system champion)", "Arifur Rahman", "Kamrul Hasan", "the factory owner"],
+      "rule": "No step should take more than one working day."
+    }
+  }
+}
