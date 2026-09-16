@@ -12,7 +12,7 @@ npm run dev      # http://localhost:3000
 npm run build && npm start
 ```
 
-Environment: `NEXT_PUBLIC_SITE_URL` (canonical base for sitemap/OG, default `https://fabricxai.com`); `NEXT_PUBLIC_FAIR_LEAD_WEBHOOK` (optional lead endpoint for `/fair`).
+Environment: `PILOT_PORTAL_PASSCODE` (required for `/pilot`: one or more passcodes, comma-separated — one for Baraka management, one for FabricXai); `PILOT_ISSUES_GITHUB_TOKEN` + `PILOT_ISSUES_GITHUB_REPO` (`owner/repo`, optional `PILOT_ISSUES_GITHUB_BRANCH`, default `main`) so "Report a problem" commits to `content/pilot/issues.json` in production; `NEXT_PUBLIC_SITE_URL` (canonical base for sitemap/OG, default `https://fabricxai.com`); `NEXT_PUBLIC_FAIR_LEAD_WEBHOOK` (optional lead endpoint for `/fair`).
 Route groups: `src/app/(site)` carries the shared shell (thread, nav, footer); `src/app/(fair)` is the bare QR landing.
 After Innovation Fair 2026, set `FAIR_OVER=1` and `/fair` 301s to `/demo` (`/fair/marbim` to `/marbim`).
 
@@ -31,6 +31,7 @@ After Innovation Fair 2026, set `FAIR_OVER=1` and `/fair` 301s to `/demo` (`/fai
 | `/fair` | QR landing for Innovation Fair 2026 · Stall 16. Standalone shell (no nav/footer/thread, always light, English default with a বাংলা switch). WhatsApp deep link when `FAIR.whatsapp` is set, otherwise a 3-field form that posts to `NEXT_PUBLIC_FAIR_LEAD_WEBHOOK` or falls back to a prefilled email. Inline "never" list, vCard, links to fabricxai.com and sociofitechnology.com. Print the QR as `/fair?s=16` to tag the source. |
 | `/fair/marbim` | "Meet Marbim" — the QR follow-on for stall 16, linked from the card at the top of `/fair`. Mobile-first, বাংলা by default (EN/বাংলা switch shared with `/fair` via `fx_fair_lang`). Marbim types its own introduction, then a fully scripted "hand me a paper" demo: pick a PO / LC / tech pack / handwritten challan → 1.5 s amber scan → extracted rows → the amber **You approve** button → saved. Zero API calls; both languages are server-rendered and toggled with CSS. Copy lives in `src/app/(fair)/fair/marbim/`. |
 | `/handoff` | Internal — noindex, excluded from nav, sitemap and robots |
+| `/pilot` | **Baraka pilot portal** — served at `pilot.fabricxai.com/` by the host rewrite in `src/proxy.ts`. Own shell (no nav/footer/thread), passcode-gated, noindex. Renders entirely from `content/pilot/baraka.json` + `issues.json` (see `content/pilot/README.md`). "Report a problem" posts to `/pilot/api/issues`, which appends to `issues.json` (a GitHub commit in production), falling back to a prefilled email. |
 
 ## Motion system (`src/components/motion/`)
 
